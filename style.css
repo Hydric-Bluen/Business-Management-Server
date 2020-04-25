@@ -25,25 +25,36 @@ body {
   cursor: pointer;
 }
 
-#employee-menu {
+.employee-menu {
   border: solid medium black;
   flex-direction: column;
   display: none;
 }
 
-#employee-menu header {
+.employee-menu header {
   border-bottom: solid thin black;
   position: relative;
   padding: 4px;
 }
 
-#employee-menu header div {
+#roster header div {
   background-color: darkred;
   opacity: .8;
   position: absolute;
   top: 0%;
   left: 0%;
   width: 106.797px;
+  height: 31px;
+  z-index: -1;
+}
+
+#hiring header div {
+  background-color: darkred;
+  opacity: .8;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 62.063px;
   height: 31px;
   z-index: -1;
 }

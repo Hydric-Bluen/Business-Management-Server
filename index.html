@@ -3,27 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- Top Bar -->
     <!-- Employee Section -->
     <div id="button-container">
-      <button class="sidebar-button" type="button" style="background-image: url(images/EmployeeButtonIcon.png); background-position:center;" onclick="displayWindow('employee-menu')"></button>
-      <button class="sidebar-button" type="button" style="background-image: url(images/HireEmployeesButtonIcon.png); background-position: center;" onclick="displayWindow('hire-employees-menu')"></button>
+      <button class="sidebar-button" type="button" style="background-image: url(images/EmployeeButtonIcon.png); background-position:center;" onclick="displayWindow('roster')"></button>
+      <button class="sidebar-button" type="button" style="background-image: url(images/HireEmployeesButtonIcon.png); background-position: center;" onclick="displayWindow('hiring')"></button>
     </div>
-    <div id="employee-menu">
+    <div class="employee-menu" id="roster">
       <header>
         <div></div>
         <h3>Employees</h3>
       </header>
       <div>
         <table>
-          <tbody id="employee-table">
+          <tbody id="roster-table">
           </tbody>
         </table>
       </div>
     </div>
-
+    <div class="employee-menu" id="hiring">
+      <header>
+        <div></div>
+        <h3>Hiring</h3>
+      </header>
+      <div>
+        <table>
+          <tbody id="hiring-table">
+          </tbody>
+        </table>
+      </div>
+    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
