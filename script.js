@@ -1,7 +1,7 @@
 const table = document.getElementById('employee-table');
 
 let open = false;
-let employees = ['Alyssa', 'Courtney', 'Harper', 'Johnson', 'Lance', 'Stronge'];
+let employees = [];
 
 // TODO: Make the top bar variables and continue working on making the employee loading system easier to manage.
 

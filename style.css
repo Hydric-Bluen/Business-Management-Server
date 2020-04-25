@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 *:hover {
@@ -12,16 +13,42 @@ body {
   margin: 8px;
 }
 
-button {
+.sidebar-button {
   padding: 8px;
+  background-color: white;
+  border: solid medium black;
+  width: 34px;
+  height: 34px;
+}
+
+.sidebar-button:hover {
+  cursor: pointer;
 }
 
 #employee-menu {
   border: solid medium black;
   flex-direction: column;
+  display: none;
 }
 
 #employee-menu header {
   border-bottom: solid thin black;
+  position: relative;
   padding: 4px;
+}
+
+#employee-menu header div {
+  background-color: darkred;
+  opacity: .8;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 106.797px;
+  height: 31px;
+  z-index: -1;
+}
+
+#button-container {
+  display: flex;
+  flex-direction: column;
 }
