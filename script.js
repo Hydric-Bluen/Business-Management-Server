@@ -7,26 +7,16 @@ let names = ['Ashley', 'Courtney', 'Johnson', 'Strong', 'Lance', 'Harper'];
 
 // TODO: Make the top bar variables and continue working on making the employee loading system easier to manage.
 
-// Parse Employee Information and draw it to the screen
-function parseEmployeeInformation() {
-  for(employee in employees) {
-    roster.innerHTML += `<tr><td><p>${employees[employee].toString()}</p></td></tr>`;
-  }
-  return;
-}
-
-// parse the hire information and draw it to the screen
-function parseHireInformation() {
-  for(name in names) {
-    hiring.innerHTML += `<tr><td style="display: flex; flex-direction: row;"><p>${names[name].toString()}</p><button id="hire" type="button" onclick="hireEmployee('${names[name].toString()}')">hire</button></td></tr>`
-  }
-  return;
-}
-
-// Clear the information panels before drawing to them again
-function purgeInformation() {
-  hiring.innerHTML = "";
+// displaying employee information
+function displayInformation() {
   roster.innerHTML = "";
+  hiring.innerHTML = "";
+  for(employee in employees) {
+    roster.innerHTML += `<tr><td style="display: flex; flex-direction: row;"><p>${employees[employee].toString()}</p><button id="fire" type="button" onclick="fireEmployee('${employees[employee].toString()}')">Fire</button></td></tr>`;
+  }
+  for(name in names) {
+    hiring.innerHTML += `<tr><td style="display: flex; flex-direction: row;"><p>${names[name].toString()}</p><button id="hire" type="button" onclick="hireEmployee('${names[name].toString()}')">Hire</button></td></tr>`
+  }
   return;
 }
 
@@ -43,9 +33,22 @@ function hireEmployee(name) {
       break;
     }
   }
-  purgeInformation();
-  parseEmployeeInformation();
-  parseHireInformation();
+  displayInformation();
+}
+
+// Firing employees
+function fireEmployee(name) {
+  // Scroll through the employees array
+  for(employee in employees) {
+    // Check if the name exists in the array
+    if(employees[employee].toString === name) {
+      // Add the name to the names array
+      names.push(name);
+      // Remove the name from the employees array
+      employees.splice(name, 1);
+    }
+  }
+  displayInformation();
 }
 
 // Open and close the different windows in the area.
@@ -62,6 +65,5 @@ function displayWindow(value) {
 }
 
 window.onload = function() {
-  parseEmployeeInformation();
-  parseHireInformation();
+  displayInformation();
 }
