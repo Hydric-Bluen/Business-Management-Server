@@ -5,7 +5,20 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <button type="button" onclick="displayWindow('employees')">E</button>
+    <!-- Top Bar -->
+    <!-- Employee Section -->
+    <button type="button" onclick="displayWindow('employee-menu')">E</button>
+    <div id="employee-menu">
+      <header>
+        <h3>Employees</h3>
+      </header>
+      <div>
+        <table>
+          <tbody id="employee-table">
+          </tbody>
+        </table>
+      </div>
+    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:hover {
+  cursor: default;
+}
+
+body {
+  margin: 8px;
+}
+
+button {
+  padding: 8px;
+}
+
+#employee-menu {
+  border: solid medium black;
+  flex-direction: column;
+}
+
+#employee-menu header {
+  border-bottom: solid thin black;
+  padding: 4px;
+}
